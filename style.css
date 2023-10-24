@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smoke-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  /* Font: */
+  --main-font: "Poppins", sans-serif;
+}
+
+/* Desktop */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+
+@media screen and (max-width: 395px) {
+}
