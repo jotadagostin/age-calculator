@@ -7,7 +7,7 @@
 
 :root {
   /* Primary */
-  --purple: hsl(259, 100%, 65%);
+  --purple: hsl(259, 49%, 51%);
   --light-red: hsl(0, 100%, 67%);
   /* Neutral */
   --white: hsl(0, 0%, 100%);
@@ -27,12 +27,12 @@ body {
 
 .container_section {
   background-color: white;
-  width: 60vw;
-  height: 60vh;
+  width: 45vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  margin-top: 120px;
-  margin-left: 180px;
+  margin-top: 60px;
+  margin-left: 330px;
   padding: 5px;
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 5%;
@@ -44,6 +44,8 @@ body {
   display: flex;
   flex-direction: row;
   gap: 25px;
+  padding: 25px;
+  margin-top: 5px;
 }
 
 h1 {
@@ -51,6 +53,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
+  padding: 5px;
 }
 
 input {
@@ -62,6 +65,52 @@ input {
   font-size: 21px;
   font-weight: 700;
   color: var(--smoke-grey);
+  margin-left: 10px;
+}
+
+.container_symbol {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+  margin-right: 10px;
+  padding-right: 20px;
+}
+
+.container_line {
+  background-color: var(--smoke-grey);
+  height: 1px;
+  align-self: center;
+  width: 480px;
+}
+
+button {
+  padding-top: 5px;
+  border-style: none;
+  background-color: white;
+}
+
+svg {
+  width: 60px;
+  height: 60px;
+  background-color: var(--purple);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+span {
+  color: var(--purple);
+  font-size: 46px;
+  font-weight: 800px;
+  margin-right: 10px;
+  margin-left: 40px;
+}
+
+p {
+  margin-right: 5px;
+  color: black;
+  font-size: 60px;
+  font-weight: 800px;
+  height: 70px;
 }
 
 /* Mobile */
