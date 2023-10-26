@@ -113,6 +113,24 @@ p {
   height: 70px;
 }
 
+.svg-input-button {
+  background-image: ;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Estilize o SVG dentro do botão */
+.svg-input-button svg {
+  fill: #fff; /* Cor de preenchimento do SVG */
+  width: 20px; /* Largura desejada */
+  height: 20px; /* Altura desejada */
+  margin-right: 5px; /* Espaçamento à direita do SVG (opcional) */
+}
+
 /* Mobile */
 
 @media screen and (max-width: 395px) {
