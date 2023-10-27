@@ -15,40 +15,23 @@ const day = document.getElementById("fday");
 const month = document.getElementById("fmonth");
 const year = document.getElementById("fyear");
 
-// function validarData() {
-//     // Obter valores do formulário
-//     const dia = parseInt(document.getElementById('dia').value, 10);
-//     const mes = parseInt(document.getElementById('mes').value, 10);
-//     const ano = parseInt(document.getElementById('ano').value, 10);
+function getData() {
+  const day = document.getElementById("fday").value;
+  const month = document.getElementById("fmonth").value;
+  const year = document.getElementById("fyear").value;
 
-//     // Verificar se o dia, mês e ano são válidos
-//     if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 1900) {
-//         // Exibir mensagem de erro
-//         exibirErro("Por favor, insira uma data válida.");
-//         return false;
-//     }
+  return { day, month, year };
+}
 
-//     // Outras verificações podem ser adicionadas conforme necessário
+function validadeDate() {
+  if (day < 1 || day > 31 || month < 1 || month > 12 || ano < 1900) {
+    alert("please, insert a valid date");
+    return false;
+  }
 
-//     // Se tudo estiver válido, retornar true
-//     return true;
-// }
+  return true;
+}
 
-// function exibirErro(mensagem) {
-//     // Exibir mensagem de erro abaixo dos campos de entrada
-//     const mensagemErro = document.getElementById('mensagemErro');
-//     mensagemErro.textContent = mensagem;
-// }
-
-// <!-- Seus campos de entrada -->
-// Dia: <input type="text" id="dia"> Mês: <input type="text" id="mes"> Ano: <input type="text" id="ano">
-
-// <!-- Elemento para exibir mensagens de erro -->
-// <p id="mensagemErro" style="color: red;"></p>
-
-// <!-- Botão para acionar a validação -->
-// <button onclick="validarData()">Verificar Data</button>
-
-// finarlizar button html5
+validadeDate();
 
 // https://chat.openai.com/share/4f350b80-2f6e-493e-8b85-611a85f1b04d
