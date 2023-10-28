@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,102 +23,59 @@
 /* Desktop */
 
 body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--off-black);
   background-color: var(--light-grey);
-}
-
-.container_section {
-  background-color: white;
-  width: 45vw;
-  height: 80vh;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-  margin-left: 330px;
-  padding: 5px;
-  border-bottom-right-radius: 30%;
-  border-bottom-left-radius: 5%;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.container_forms {
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 2rem;
+  max-width: 520px;
+  border-radius: 1rem;
+  border-bottom-right-radius: 30%;
+}
+
+.form {
   display: flex;
   flex-direction: row;
-  gap: 25px;
-  padding: 25px;
-  margin-top: 5px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-h1 {
+.form-group {
   color: var(--smoke-grey);
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  padding: 5px;
+  letter-spacing: 3px;
 }
 
-input {
-  width: 120px;
-  height: 50px;
-  border-radius: 10%;
-  background-color: var(--off-white);
-  padding-left: 15px;
-  font-size: 21px;
+.form-group input {
+  width: 80%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--light-grey);
+  font-family: inherit;
+  font-size: 1.3rem;
+}
+
+span .error {
+  display: inline-block;
+  color: var(--light-red);
+  font-size: 0.7rem;
   font-weight: 700;
-  color: var(--smoke-grey);
-  margin-left: 10px;
 }
 
-.container_symbol {
-  display: flex;
-  justify-content: end;
-  padding: 5px;
-  margin-right: 10px;
-  padding-right: 20px;
-}
-
-.container_line {
-  background-color: var(--light-grey);
-  height: 2px;
-  align-self: center;
-  width: 480px;
-}
-
-button {
-  padding-top: 5px;
-  border-style: none;
-  background-color: white;
-}
-
-svg {
-  width: 60px;
-  height: 60px;
-  background-color: var(--purple);
-  border-radius: 50%;
-  padding: 15px;
-}
-
-span {
-  color: var(--purple);
-  font-size: 46px;
-  font-weight: 800px;
-  margin-right: 10px;
-  margin-left: 40px;
-}
-
-p {
-  margin-right: 5px;
-  color: black;
-  font-size: 60px;
-  font-weight: 800px;
-  height: 70px;
-}
-
-.input-submit {
+.btn {
   
-  background-image: url('./assets/images/favicon-32x32.png');
-}
-/* Mobile */
-
-@media screen and (max-width: 395px) {
 }
