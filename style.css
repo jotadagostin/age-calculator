@@ -77,5 +77,21 @@ span .error {
 }
 
 .btn {
-  
+  margin: auto;
+  border: none;
+  background-color: var(--purple);
+  border-radius: 50%;
+  font-family: inherit;
+  cursor: pointer;
+  padding: .8rem 1rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn img {
+  width: 2rem;
+}
+
+.btn:hover{
+  background-color: var(--Light-Red);
 }
