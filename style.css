@@ -93,7 +93,7 @@ span .error {
 }
 
 .btn:hover {
-  background-color: var(--Light-Red);
+  background-color: black;
 }
 
 .result {
