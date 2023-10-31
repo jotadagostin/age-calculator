@@ -71,7 +71,7 @@ body {
 
 span .error {
   display: inline-block;
-  color: var(--light-red);
+  color: red;
   font-size: 0.7rem;
   font-weight: 700;
 }
@@ -106,6 +106,7 @@ span .error {
 
 .result span {
   color: var(--purple);
+  margin-right: 15px;
 }
 
 .confetti {
@@ -125,6 +126,14 @@ span .error {
   overflow-y: hidden;
 }
 
+.attribution {
+  margin-top: 35px;
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+}
 @media screen and (max-width: 400px) {
   .container {
     max-width: 300px;

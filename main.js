@@ -1,85 +1,86 @@
-// Javascript to set the main JS code:
+const DayError = document.querySelector(".day-error");
+const MonthError = document.querySelector(".month-error");
+const YearError = document.querySelector(".year-error");
+const YearResult = document.querySelector(".year-result");
+const MonthResult = document.querySelector(".month-result");
+const DayResult = document.querySelector(".day-result");
+const SubmitBtn = document.querySelector(".btn");
+const InputDay = document.getElementById("day");
+const InputMonth = document.getElementById("month");
+const InputYear = document.getElementById("year");
+const InputRequiredError =
+  "<p style='color: red; font-size: 16px; '>This field is required!</p>";
+const InputDayError =
+  "<p style='color: red; font-size: 16px;'>Must be a valid date!</p>";
+const InputMonthError =
+  "<p style='color: red; font-size: 16px;'>Must be a valid month!</p>";
+const InputYearError =
+  "<p style='color: red; font-size: 16px;'>Must be in the past!</p>";
+const Canvas = document.querySelector(".can");
 
-const dayError = document.querySelector(".day-error");
-const monthError = document.querySelector(".month-error");
-const yearError = document.querySelector(".year-error");
-const dayResult = document.querySelector(".day-result");
-const monthResult = document.querySelector(".month-result");
-const yearResult = document.querySelector(".year-result");
-const submitBtn = document.querySelector(".btn");
-const inputDay = document.getElementById("day");
-const inputMonth = document.getElementById("month");
-const inputYear = document.getElementById("year");
-const inputRequiredError = "This field is required";
-const inputDayError = "Must be a valid day";
-const inputMonthError = "Must be a valid month";
-const inputYearError = "Must be a valid year";
-const canvas = document.querySelector(".can");
-
-// function to check the day:
+// // function to check the day:
 
 function CheckDayInput() {
-  let value = inputDay.value;
+  let value = InputDay.value;
   if (value == "") {
-    dayError.innerHTML = inputRequiredError;
+    DayError.innerHTML = InputRequiredError;
     return false;
   } else if (value < 1 || value > 31) {
-    dayError.innerHTML = inputDayError;
+    DayError.innerHTML = InputDayError;
     return false;
   } else {
-    dayError.innerHTML = "";
+    DayError.innerHTML = "";
     return true;
   }
 }
 
-// function to check the Month:
+// // function to check the Month:
 
 function CheckMonthInput() {
-  let value = inputMonth.value;
+  let value = InputMonth.value;
   if (value == "") {
-    monthError.innerHTML = inputRequiredError;
+    MonthError.innerHTML = InputRequiredError;
     return false;
   } else if (value < 1 || value > 12) {
-    monthError.innerHTML = inputMonthError;
+    MonthError.innerHTML = InputMonthError;
     return false;
   } else {
-    monthError.innerHTML = "";
+    MonthError.innerHTML = "";
     return true;
   }
 }
 
-// function to check the Year:
+// // function to check the Year:
 
 function CheckYearInput() {
-  let value = inputYear.value;
+  let value = InputYear.value;
   let currentYear = new Date().getFullYear();
   console.log(currentYear);
   if (value == "") {
-    yearError.innerHTML = inputRequiredError;
+    YearError.innerHTML = InputRequiredError;
     return false;
   } else if (value > currentYear) {
-    monthError.innerHTML = inputYearError;
+    YearError.innerHTML = InputYearError;
     return false;
   } else {
-    yearError.innerHTML = "";
+    YearError.innerHTML = "";
     return true;
   }
 }
 
-//   function to calculate the Age:
+// //   function to calculate the Age:
 
 function calculateAge(birthday) {
-  let birthdate = new Date(birthday);
-  let today = new Date();
+  var birthdate = new Date(birthday);
+  var today = new Date();
 
-  let days = today.getDate() - birthdate.getDate();
-  let months = today.getFullYear() - birthdate.getMonth();
-  let years = today.getFullYear() - birthdate.getFullYear();
+  var years = today.getFullYear() - birthdate.getFullYear();
+  var months = today.getMonth() - birthdate.getMonth();
+  var days = today.getDate() - birthdate.getDate();
+  // If the birthdate month and day are after the current month and day,
+  // subtract one year from the age
 
-  //   if the birthdate month and date are after the current month and day,
-  // substract one year from the age
-
-  if (months < 0 || (month == 0 && days < 0)) {
+  if (months < 0 || (months === 0 && days < 0)) {
     years--;
     if (months === 0) {
       months = 11;
@@ -88,21 +89,22 @@ function calculateAge(birthday) {
     }
     days = 30 + days;
   }
-  dayResult.innerHTML = days;
-  monthResult.innerHTML = months;
-  yearResult.innerHTML = years;
+
+  YearResult.innerHTML = years;
+  MonthResult.innerHTML = months;
+  DayResult.innerHTML = days;
 }
 
-submitBtn.addEventListener("click", function (e) {
+SubmitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  let day = CheckDayInput;
-  let month = CheckMonthInput;
-  let year = CheckYearInput;
+  let day = CheckDayInput();
+  let month = CheckMonthInput();
+  let year = CheckYearInput();
   if (!day || !month || !year) return;
-  let birthday = `${inputMonth.value}/${inputDay.value}/${inputYear.value}`;
+  let birthday = `${InputMonth.value}/${InputDay.value}/${InputYear.value}`;
   calculateAge(birthday);
-  canvasanvas.style.display = "block";
+  Canvas.style.display = "block";
   setTimeout(function () {
-    canvasanvas.style.display = "none";
+    Canvas.style.display = "none";
   }, 8000);
 });
